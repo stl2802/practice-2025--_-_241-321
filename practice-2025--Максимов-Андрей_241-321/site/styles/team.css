@@ -1,0 +1,111 @@
+html {
+    position: relative;
+    background-image: url('../img/photo_2025-03-09_17-53-35.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    color: #000000;
+}
+
+html::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: back 1s forwards;
+    -webkit-animation: back 1s forwards ease-in-out;
+}
+
+@keyframes back{
+    from{
+        background-color: rgb(150, 136, 92);
+    }
+    to{
+        background-color: rgba(150, 136, 92, 0.719);
+    }
+}
+h1{
+    font-size: 2rem;
+    margin-left: 47%;
+    margin-bottom: 2rem;
+}
+
+section{
+    padding: 1rem;
+}
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0066ff;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.logo img {
+    width: 15rem;
+    height: 15rem;
+    animation: rotate 1s linear forwards;
+    -webkit-animation: rotate 1s linear forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    margin-right: 12rem;
+    margin-bottom: 4rem;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table{
+    border: #000000 solid 1px;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+table td{
+    border: #000000 solid 1px;
+    padding: 0.5rem;
+}

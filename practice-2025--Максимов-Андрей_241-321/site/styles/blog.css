@@ -1,0 +1,215 @@
+html {
+    position: relative;
+    background-image: url('../img/город3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    color: #000000;
+}
+
+html::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: back 1s forwards;
+    -webkit-animation: back 1s forwards ease-in-out;
+}
+
+@keyframes back{
+    from{
+        background-color: rgb(94, 74, 10);
+    }
+    to{
+        background-color: rgba(150, 136, 92, 0.719);
+    }
+}
+h1{
+    font-size: 4rem;
+    margin-left: 43%;
+    margin-bottom: 2rem;
+}
+
+section{
+    padding: 1rem;
+}
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0066ff;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.logo img {
+    width: 15rem;
+    height: 15rem;
+    animation: rotate 1s linear forwards;
+    -webkit-animation: rotate 1s linear forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+nav{
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    margin-right: 12rem;
+    margin-bottom: 4rem;
+}
+
+.new_design{
+    display: flex;
+    justify-content: center;
+}
+
+.new_technology{
+    display: flex;
+    flex-direction: column;
+}
+
+.uuu{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.TG{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.new_technology > div, .new_design > div,.new_raskadrovka,.raskadrovka_3,.TG{
+    align-self: center;
+    border: 1px solid black;
+    max-width: 30rem;
+    padding: 1rem;
+}
+
+.new_technology > div > p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.new_technology > div > img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.post_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.raskadrovka{
+    border: 1px solid black;
+    padding: 1rem;
+}
+.raskadrovka > p{
+    font-size: 2rem;
+    text-align: center;
+}
+.raskadrovka > img{
+    max-width: 50rem;
+    max-height: 45rem;
+    object-fit: cover;
+}
+
+.personagies{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mama_vani, .sveta, .vana{
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.mama_vani > p, .sveta > p,.vana > p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.mama_vani > img,.sveta > img,.vana > img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.vana > img{
+    object-position:top;
+}
+.sveta > img{
+    object-position: 50% 15%;
+}
+.mama_vani > img{
+    object-position: left;
+}
+
+
+
+.footer-flex-container{
+    padding: 1rem;
+    display: flex;
+    justify-content:space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    border-top: 1px solid #000000;
+}
+
+.footer-container > address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
